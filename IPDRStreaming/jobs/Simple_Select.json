@@ -1,7 +1,7 @@
 {
   "job_name" : "Simple_Select",
   "api_endpoints" : [ ],
-  "sql" : "/* This job will filter IPDR data stream based on the Service Class */\nSELECT\nbatchId AS BATCH,\ndsScn AS SRVC_CLASS,\ncmMacAddr AS MAC_ADDRS,\nfromTime AS FROM_TIME,\ntoTime AS TO_TIME,\nFLOOR(CURRENT_TIMESTAMP TO HOUR) AS LAST_TMSTMP,\nregion AS REGION,\ndsPackets AS DWSTRM_PCKT,\nusPackets AS UPSTRM_PCKT\nFROM ipdr_table\nWHERE dsScn = 'data'\n",
+  "sql" : "/* This job will read the data from the Flink table and filter IPDR data stream based on the Service Class field */\nSELECT\nbatchId AS BATCH,\ndsScn AS SRVC_CLASS,\ncmMacAddr AS MAC_ADDRS,\nfromTime AS FROM_TIME,\ntoTime AS TO_TIME,\nFLOOR(CURRENT_TIMESTAMP TO HOUR) AS LAST_TMSTMP,\nregion AS REGION,\ndsPackets AS DWSTRM_PCKT,\nusPackets AS UPSTRM_PCKT\nFROM ipdr_table\nWHERE dsScn = 'data'\n",
   "mv_config" : {
     "name" : "Simple_Select",
     "retention" : 300,
