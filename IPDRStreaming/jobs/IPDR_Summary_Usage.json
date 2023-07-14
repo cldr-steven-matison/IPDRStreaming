@@ -1,7 +1,7 @@
 {
   "job_name" : "IPDR_Summary_Usage",
   "api_endpoints" : [ ],
-  "sql" : "/* Get IPDR Summary Usage data from the view */\nSELECT * FROM ipdr_summary;",
+  "sql" : "/* Get IPDR Summary Usage data from the view */\n/* I'm aggregating usOctets, dsOctets by Mac Address in 20 seconds windows*/\nSELECT * FROM ipdr_summary;",
   "mv_config" : {
     "name" : "IPDR_Summary_Usage",
     "retention" : 300,
