@@ -13,4 +13,4 @@ This repo contains some sample SQL Stream Builder (SSB) jobs to consume and proc
 
 ## Usage
 
-To use this repo create a new SSB project called **IPDRStreaming** and import 
+To use this repo create a new SSB project called **IPDRStreaming** and go to source control and import the content.
