@@ -1,9 +1,9 @@
 {
-  "job_name" : "IPDR_Summary_Usage",
+  "job_name" : "IPDR_Summary_Select",
   "api_endpoints" : [ ],
-  "sql" : "/* Get IPDR Summary Usage data from the view */\n/* I'm aggregating usOctets, dsOctets by Mac Address in 20 seconds windows*/\nSELECT * FROM ipdr_summary;",
+  "sql" : "/* This SSB job will get IPDR Summary Usage data from the view */\n/* I'm aggregating usOctets, dsOctets by Mac Address in 20 seconds windows and sending output to the filesystem*/\nSELECT * FROM ipdr_summary;",
   "mv_config" : {
-    "name" : "IPDR_Summary_Usage",
+    "name" : "IPDR_Summary_Select",
     "retention" : 300,
     "min_row_retention_count" : 0,
     "recreate" : false,
